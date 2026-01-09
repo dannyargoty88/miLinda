@@ -294,7 +294,7 @@ function completeGame() {
     
     if (percentage === 100) {
         title = '¡Perfecto! 🎉💕';
-        message = `¡Respondiste todas las preguntas correctamente! Eres increíble y conoces cada detalle de nuestros momentos especiales. ¡Te amo mucho mi amor!`;
+        message = `¡Respondiste todas las preguntas correctamente! Eres increíble y conoces cada detalle de nuestros momentos especiales. ¡Te adoro mucho mi amor!`;
         icon = 'success';
     } else if (percentage >= 50) {
         title = '¡Muy bien! 😊💖';
@@ -310,12 +310,58 @@ function completeGame() {
         title: title,
         text: message,
         icon: icon,
-        confirmButtonText: 'Jugar de nuevo',
+        confirmButtonText: percentage === 100 ? 'Continuar' : 'Jugar de nuevo',
         confirmButtonColor: '#e91e63',
         allowOutsideClick: false
     }).then(() => {
-        restartGame();
+        if (percentage === 100) {
+            showCompletionView();
+        } else {
+            restartGame();
+        }
     });
+}
+
+function showCompletionView() {
+    // Ocultar sección de preguntas
+    const questionsSection = document.querySelector('.questions-section');
+    questionsSection.style.display = 'none';
+    
+    // Crear y mostrar botón de reiniciar
+    createRestartButton();
+}
+
+function createRestartButton() {
+    // Verificar si ya existe el botón
+    let restartContainer = document.getElementById('restartContainer');
+    if (restartContainer) {
+        restartContainer.style.display = 'block';
+        return;
+    }
+    
+    // Crear contenedor del botón de reiniciar
+    restartContainer = document.createElement('div');
+    restartContainer.id = 'restartContainer';
+    restartContainer.className = 'restart-container';
+    
+    restartContainer.innerHTML = `
+        <div class="completion-message">
+            <h2>🎉 ¡Felicitaciones! 🎉</h2>
+            <p>¡Has completado el juego perfectamente!<br>
+            Ahora puedes disfrutar de la imagen completa.</p>
+            <button id="restartGameBtn" class="restart-btn">
+                🔄 Jugar de Nuevo
+            </button>
+        </div>
+    `;
+    
+    // Agregar al contenedor principal antes de la sección de progreso
+    const gameContainer = document.querySelector('.game-container');
+    const progressSection = document.querySelector('.progress-section');
+    gameContainer.insertBefore(restartContainer, progressSection);
+    
+    // Agregar event listener al botón
+    document.getElementById('restartGameBtn').addEventListener('click', restartGame);
 }
 
 function restartGame() {
@@ -328,6 +374,16 @@ function restartGame() {
     // Mezclar preguntas al reiniciar
     shuffledQuestions = shuffleArray(questions);
     availableQuestions = [...shuffledQuestions]; // Inicializar con todas las preguntas mezcladas
+    
+    // Mostrar sección de preguntas
+    const questionsSection = document.querySelector('.questions-section');
+    questionsSection.style.display = 'block';
+    
+    // Ocultar botón de reiniciar
+    const restartContainer = document.getElementById('restartContainer');
+    if (restartContainer) {
+        restartContainer.style.display = 'none';
+    }
     
     // Resetear progreso
     document.getElementById('progressFill').style.width = '0%';

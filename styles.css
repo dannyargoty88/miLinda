@@ -346,6 +346,58 @@ body {
     margin: 0;
 }
 
+/* === CONTENEDOR DE REINICIO === */
+.restart-container {
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.completion-message {
+    max-width: 400px;
+}
+
+.completion-message h2 {
+    color: #27ae60;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.completion-message p {
+    color: #2c3e50;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.restart-btn {
+    background: linear-gradient(135deg, #e91e63, #ad1457);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+}
+
+.restart-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4);
+    background: linear-gradient(135deg, #ad1457, #880e4f);
+}
+
+.restart-btn:active {
+    transform: translateY(-1px);
+}
+
 /* === SECCIÓN PROGRESO === */
 .progress-section {
     padding: 30px;
@@ -551,6 +603,23 @@ body {
         padding: 20px 15px;
     }
     
+    .restart-container {
+        padding: 20px 15px;
+    }
+    
+    .completion-message h2 {
+        font-size: 1.5em;
+    }
+    
+    .completion-message p {
+        font-size: 14px;
+    }
+    
+    .restart-btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+    
     .question-header p {
         font-size: 14px;
         padding: 15px;
@@ -609,6 +678,24 @@ body {
     
     .progress-section {
         padding: 15px 10px;
+    }
+    
+    .restart-container {
+        padding: 15px 10px;
+    }
+    
+    .completion-message h2 {
+        font-size: 1.3em;
+    }
+    
+    .completion-message p {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
+    .restart-btn {
+        padding: 10px 25px;
+        font-size: 13px;
     }
     
     .question-header h2 {
