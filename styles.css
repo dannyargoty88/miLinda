@@ -1,0 +1,646 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* === ESTILOS DE LOGIN === */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-header h1 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.6em;
+}
+
+.login-header p {
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.hint-text {
+    color: #e67e22;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    background: #fdf2e9;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-left: 3px solid #e67e22;
+}
+
+.login-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+}
+
+.demo-credentials {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    text-align: left;
+}
+
+.demo-credentials h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.demo-credentials p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #5a6c7d;
+}
+
+/* === ESTILOS DEL DASHBOARD === */
+.navbar {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-brand {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: white;
+}
+
+.nav-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+}
+
+.logout-btn-round {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.logout-btn-round:hover {
+    background: rgba(231, 76, 60, 0.8);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.logout-btn-round:active {
+    transform: scale(0.95);
+}
+
+.logout-btn-round svg {
+    transition: transform 0.2s ease;
+}
+
+.logout-btn-round:hover svg {
+    transform: translateX(1px);
+}
+
+.main-content {
+    margin-top: 50px;
+    padding: 20px;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 70vh;
+}
+
+/* === SECCIÓN PREGUNTAS === */
+.questions-section {
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.question-header h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.question-header p {
+    color: #34495e;
+    font-size: 16px;
+    font-weight: 500;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    text-align: center;
+    border-left: 4px solid #3498db;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.option:hover {
+    border-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+}
+
+.option.selected {
+    border-color: #3498db;
+    background: #ebf3fd;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+}
+
+.option.correct {
+    border-color: #27ae60;
+    background: #d5f4e6;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.option.incorrect {
+    border-color: #e74c3c;
+    background: #fdeaea;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.option-letter {
+    background: #3498db;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.option.selected .option-letter {
+    background: #2980b9;
+}
+
+.option.correct .option-letter {
+    background: #27ae60;
+}
+
+.option.incorrect .option-letter {
+    background: #e74c3c;
+}
+
+.option-text {
+    font-size: 14px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.question-footer {
+    text-align: center;
+}
+
+.confirm-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.confirm-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+.confirm-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.instruction-text {
+    color: #7f8c8d;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* === SECCIÓN PROGRESO === */
+.progress-section {
+    padding: 30px;
+    background: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 30px;
+}
+
+.reveal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80, 0.9);
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    backdrop-filter: blur(10px);
+}
+
+.progress-container {
+    width: 100%;
+    text-align: center;
+}
+
+.progress-container h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.2);
+    height: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #27ae60, #2ecc71);
+    width: 0%;
+    transition: width 0.8s ease;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(45deg, 
+        transparent 35%, 
+        rgba(255, 255, 255, 0.3) 50%, 
+        transparent 65%);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.progress-description {
+    color: #bdc3c7;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* === MODAL DE RESULTADO === */
+.result-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalAppear 0.3s ease;
+}
+
+@keyframes modalAppear {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-header h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.modal-body p {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.modal-button {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 6px 12px;
+    }
+    
+    .nav-brand {
+        font-size: 0.95em;
+    }
+    
+    .nav-info {
+        gap: 8px;
+        font-size: 11px;
+    }
+    
+    .logout-btn-round {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .logout-btn-round svg {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .main-content {
+        padding: 15px 10px;
+        margin-top: 42px;
+    }
+    
+    .game-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    .questions-section {
+        padding: 20px 15px;
+    }
+    
+    .progress-section {
+        padding: 20px 15px;
+    }
+    
+    .question-header p {
+        font-size: 14px;
+        padding: 15px;
+    }
+    
+    .option {
+        padding: 12px;
+    }
+    
+    .option-text {
+        font-size: 13px;
+    }
+    
+    .progress-container h3 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 25px 15px;
+    }
+    
+    .nav-container {
+        padding: 5px 10px;
+    }
+    
+    .nav-brand {
+        font-size: 0.85em;
+    }
+    
+    .nav-info {
+        gap: 6px;
+        font-size: 10px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .logout-btn-round {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .logout-btn-round svg {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .main-content {
+        margin-top: 38px;
+    }
+    
+    .questions-section {
+        padding: 15px 10px;
+    }
+    
+    .progress-section {
+        padding: 15px 10px;
+    }
+    
+    .question-header h2 {
+        font-size: 1.2em;
+    }
+    
+    .question-header p {
+        font-size: 13px;
+        padding: 12px;
+    }
+    
+    .option {
+        padding: 10px;
+    }
+    
+    .option-letter {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+    
+    .option-text {
+        font-size: 12px;
+    }
+    
+    .confirm-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        margin: 20px;
+    }
+}

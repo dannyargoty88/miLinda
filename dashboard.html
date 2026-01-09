@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Especial - Dashboard</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐼</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span>🐼 Juego Especial</span>
+            </div>
+            <div class="nav-info">
+                <span id="currentDate"></span>
+                <span id="userWelcome"></span>
+                <button id="logoutBtn" class="logout-btn-round" title="Cerrar Sesión">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16,17 21,12 16,7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="game-container">
+            <!-- Lado Izquierdo: Preguntas -->
+            <div class="questions-section">
+                <div class="question-header">
+                    <h2 id="questionTitle">🤔 Pregunta <span id="questionNumber">1</span> de <span id="totalQuestions">2</span></h2>
+                    <p id="questionText">Cargando pregunta...</p>
+                </div>
+                
+                <div class="options-container">
+                    <div class="option" data-option="A">
+                        <span class="option-letter">A</span>
+                        <span class="option-text" id="optionA">Opción A</span>
+                    </div>
+                    <div class="option" data-option="B">
+                        <span class="option-letter">B</span>
+                        <span class="option-text" id="optionB">Opción B</span>
+                    </div>
+                    <div class="option" data-option="C">
+                        <span class="option-letter">C</span>
+                        <span class="option-text" id="optionC">Opción C</span>
+                    </div>
+                    <div class="option" data-option="D">
+                        <span class="option-letter">D</span>
+                        <span class="option-text" id="optionD">Opción D</span>
+                    </div>
+                </div>
+                
+                <div class="question-footer">
+                    <button id="confirmBtn" class="confirm-btn" disabled>📝 Confirmar Respuesta</button>
+                    <p class="instruction-text">Selecciona una respuesta y confirma para continuar</p>
+                </div>
+            </div>
+
+            <!-- Lado Derecho: Progreso e Imagen -->
+            <div class="progress-section">
+                <div class="image-container">
+                    <img id="revealImage" src="assets/mi_linda.png" alt="Imagen Especial" class="reveal-image">
+                    <div class="image-overlay" id="imageOverlay"></div>
+                </div>
+                
+                <div class="progress-container">
+                    <h3>🎆 Progreso del Juego</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <span class="progress-text" id="progressText">0%</span>
+                    </div>
+                    <p class="progress-description">¡Responde correctamente para revelar la sorpresa!</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal de Resultado -->
+        <div id="resultModal" class="result-modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalTitle"></h2>
+                </div>
+                <div class="modal-body">
+                    <p id="modalMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button id="modalBtn" class="modal-button"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
