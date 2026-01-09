@@ -13,61 +13,61 @@ const questions = [
         id: 1,
         question: "¿Cuál fue el primer lugar al que fuimos juntos en nuestra primera cita?",
         options: {
-            A: "Un restaurante italiano",
-            B: "El parque central",
-            C: "El cine del centro comercial",
-            D: "Una cafetería cerca de la universidad"
+            A: "Un restaurante de pizza",
+            B: "El parque del perro",
+            C: "El cine del unicentro",
+            D: "Un restaurante cerca de la unidad"
         },
-        correct: "B",
-        explanation: "¡Correcto! Nuestro primer encuentro fue en ese hermoso parque donde hablamos por horas."
+        correct: "A",
+        explanation: "¡Correcto! Nuestro primer encuentro fue en ese lugar aunque para ti fue rara la cita para mi esa vez la recuerdo con mucho cariño."
     },
     {
         id: 2,
-        question: "¿Cuál es mi color favorito que siempre mencionas que me queda perfecto?",
+        question: "¿Qué me encanta de ti?",
         options: {
-            A: "Azul cielo",
-            B: "Verde esmeralda", 
-            C: "Rosado pastel",
-            D: "Morado lavanda"
+            A: "La alegria que me transmites",
+            B: "Tus ocurrencias", 
+            C: "Tu sinceridad y forma de expresarte",
+            D: "Todas las anteriores"
         },
-        correct: "A",
-        explanation: "¡Exacto! Siempre dices que el azul cielo resalta mis ojos y me hace ver radiante."
+        correct: "D",
+        explanation: "¡Exacto! Todas esas cualidades me encantan de ti."
     },
     {
         id: 3,
-        question: "¿Cuál es mi comida favorita que siempre pido cuando salimos a cenar?",
+        question: "¿Qué es lo que más me gusta físicamente de ti?",
         options: {
-            A: "Pizza margarita",
-            B: "Sushi de salmón",
-            C: "Pasta carbonara",
-            D: "Tacos al pastor"
+            A: "Tus ojos",
+            B: "Tu sonrisa",
+            C: "Tus nalguitas",
+            D: "Tu cabello"
         },
-        correct: "B",
-        explanation: "¡Perfecto! El sushi de salmón es mi debilidad y siempre lo elijo cuando vamos a nuestro restaurante japonés favorito."
+        correct: "A",
+        explanation: "¡Correcto! Tus hermosos ojazos me encantan me pierdo en ellos y por su puesto también tus NALGUITAS, tu sonrisa y toda todita tuuuuuuuuuuu me encanta!!!!."
     },
     {
         id: 4,
         question: "¿Qué es lo que más me gusta hacer contigo en nuestros fines de semana?",
         options: {
-            A: "Ver películas románticas en casa",
+            A: "Salir y conocer nuevos lugares",
             B: "Ir de compras al centro comercial",
-            C: "Caminar por la playa al atardecer",
+            C: "Ver películas y series en casa",
             D: "Cocinar juntos algo nuevo"
         },
         correct: "C",
-        explanation: "¡Así es! Nuestras caminatas por la playa viendo el atardecer son nuestros momentos más especiales y románticos."
+        explanation: "¡Siiií! todo me gusta pero nuestros momentos viendo películas y series en casa me gustan por la tranquilidad y la cercanía que compartimos."
     },
     {
         id: 5,
-        question: "¿Cuál es el apodo cariñoso que más me gusta que me digas?",
+        question: "¿Como te suelo llamar más cariñosamente?",
         options: {
             A: "Mi amor",
-            B: "Princesa",
-            C: "Corazón",
+            B: "Mi linda",
+            C: "Mi bebe",
             D: "Mi vida"
         },
         correct: "B",
-        explanation: "¡Correcto! Me derrites cada vez que me dices 'Princesa' con esa sonrisa tuya tan tierna."
+        explanation: "Perfecto! Me encanta llamarte así porque refleja todo lo lindo que veo en ti tus sentimientos, en tu persona, todo lo que veo en ti!."
     }
 ];
 
@@ -347,8 +347,7 @@ function createRestartButton() {
     restartContainer.innerHTML = `
         <div class="completion-message">
             <h2>🎉 ¡Felicitaciones! 🎉</h2>
-            <p>¡Has completado el juego perfectamente!<br>
-            Ahora puedes disfrutar de la imagen completa.</p>
+            <p>¡Has completado el juego perfectamente!<br></p>
             <button id="restartGameBtn" class="restart-btn">
                 🔄 Jugar de Nuevo
             </button>
