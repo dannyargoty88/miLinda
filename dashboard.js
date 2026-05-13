@@ -262,6 +262,10 @@ function updateProgress() {
 
     if (progress >= 100) {
         imageOverlay.style.display = 'none';
+        // Hacer la imagen clickeable para zoom
+        const revealImage = document.getElementById('revealImage');
+        revealImage.style.cursor = 'zoom-in';
+        revealImage.title = 'Haz clic para ampliar';
     }
 }
 
@@ -594,6 +598,37 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {
         logoutBtn.addEventListener('click', logout);
+    }
+
+    // Funcionalidad de Zoom de Imagen
+    const revealImage = document.getElementById('revealImage');
+    const zoomModal = document.getElementById('imageZoomModal');
+    const zoomedImg = document.getElementById('zoomedImage');
+    const closeZoom = document.querySelector('.close-zoom');
+
+    if (revealImage && zoomModal) {
+        revealImage.addEventListener('click', function() {
+            // Solo permitir zoom si el progreso es 100%
+            const progress = (correctAnswers / shuffledQuestions.length) * 100;
+            if (progress >= 100) {
+                zoomModal.style.display = "block";
+                zoomedImg.src = this.src;
+                document.body.style.overflow = 'hidden'; // Bloquear scroll
+            }
+        });
+
+        closeZoom.addEventListener('click', function() {
+            zoomModal.style.display = "none";
+            document.body.style.overflow = 'auto'; // Restaurar scroll
+        });
+
+        // Cerrar al hacer clic fuera de la imagen
+        zoomModal.addEventListener('click', function(e) {
+            if (e.target === zoomModal) {
+                zoomModal.style.display = "none";
+                document.body.style.overflow = 'auto';
+            }
+        });
     }
 });
 
