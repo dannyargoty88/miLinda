@@ -11,7 +11,8 @@ body {
     color: #333;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
     width: 100%;
 }
 
@@ -318,7 +319,8 @@ html {
     font-size: 14px;
     color: #2c3e50;
     font-weight: 500;
-    flex: 1; /* Allow text to take remaining space and wrap */
+    flex: 1;
+    /* Allow text to take remaining space and wrap */
     word-break: break-word;
 }
 
@@ -425,6 +427,19 @@ html {
     width: 100%;
     max-width: 300px;
     margin-bottom: 30px;
+    transition: max-width 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container.collage-mode {
+    max-width: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
 }
 
 .reveal-image {
@@ -432,6 +447,34 @@ html {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* Contenedor para las fotos en el Collage (sin marcos) */
+.photo-frame {
+    background: transparent;
+    padding: 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    width: 210px;
+    transition: all 0.3s ease;
+    position: relative;
+    border: none;
+    overflow: hidden; /* Asegura que la imagen no se salga del redondeo si lo hay */
+}
+
+.photo-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.photo-frame:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    z-index: 100;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .image-overlay {
@@ -484,16 +527,21 @@ html {
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(45deg, 
-        transparent 35%, 
-        rgba(255, 255, 255, 0.3) 50%, 
-        transparent 65%);
+    background: linear-gradient(45deg,
+            transparent 35%,
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 65%);
     animation: shimmer 2s infinite;
 }
 
 @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .progress-text {
@@ -539,8 +587,15 @@ html {
 }
 
 @keyframes modalAppear {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .modal-header h2 {
@@ -576,75 +631,76 @@ html {
     .nav-container {
         padding: 6px 12px;
     }
-    
+
     .nav-brand {
         font-size: 0.95em;
     }
-    
+
     .nav-info {
         gap: 8px;
         font-size: 11px;
     }
-    
+
     .logout-btn-round {
         width: 24px;
         height: 24px;
     }
-    
+
     .logout-btn-round svg {
         width: 12px;
         height: 12px;
     }
-    
+
     .main-content {
         padding: 10px;
-        margin-top: 80px; /* Increased to account for wrapped navbar */
+        margin-top: 80px;
+        /* Increased to account for wrapped navbar */
         width: 100%;
     }
-    
+
     .game-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
     }
-    
+
     .questions-section {
         padding: 20px 15px;
     }
-    
+
     .progress-section {
         padding: 20px 15px;
     }
-    
+
     .restart-container {
         padding: 20px 15px;
     }
-    
+
     .completion-message h2 {
         font-size: 1.5em;
     }
-    
+
     .completion-message p {
         font-size: 14px;
     }
-    
+
     .restart-btn {
         padding: 12px 30px;
         font-size: 14px;
     }
-    
+
     .question-header p {
         font-size: 14px;
         padding: 15px;
     }
-    
+
     .option {
         padding: 12px;
     }
-    
+
     .option-text {
         font-size: 13px;
     }
-    
+
     .progress-container h3 {
         font-size: 1em;
     }
@@ -659,17 +715,19 @@ html {
     .login-card {
         padding: 25px 15px;
     }
-    
+
     .nav-container {
         padding: 8px 12px;
-        flex-wrap: wrap; /* Allow elements to wrap if needed */
+        flex-wrap: wrap;
+        /* Allow elements to wrap if needed */
         justify-content: center;
         gap: 5px;
     }
 
     .nav-brand {
         font-size: 0.9em;
-        width: 100%; /* Take full width to force next elements down */
+        width: 100%;
+        /* Take full width to force next elements down */
         text-align: center;
         margin-bottom: 2px;
     }
@@ -679,77 +737,78 @@ html {
         font-size: 11px;
         width: 100%;
         justify-content: center;
-        flex-direction: row; /* Keep them in a row but centered */
+        flex-direction: row;
+        /* Keep them in a row but centered */
     }
-    
+
     .logout-btn-round {
         width: 22px;
         height: 22px;
     }
-    
+
     .logout-btn-round svg {
         width: 10px;
         height: 10px;
     }
-    
+
     .main-content {
         margin-top: 38px;
     }
-    
+
     .questions-section {
         padding: 15px 10px;
     }
-    
+
     .progress-section {
         padding: 15px 10px;
     }
-    
+
     .restart-container {
         padding: 15px 10px;
     }
-    
+
     .completion-message h2 {
         font-size: 1.3em;
     }
-    
+
     .completion-message p {
         font-size: 13px;
         margin-bottom: 20px;
     }
-    
+
     .restart-btn {
         padding: 10px 25px;
         font-size: 13px;
     }
-    
+
     .question-header h2 {
         font-size: 1.2em;
     }
-    
+
     .question-header p {
         font-size: 13px;
         padding: 12px;
     }
-    
+
     .option {
         padding: 10px;
     }
-    
+
     .option-letter {
         width: 25px;
         height: 25px;
         font-size: 12px;
     }
-    
+
     .option-text {
         font-size: 12px;
     }
-    
+
     .confirm-btn {
         padding: 10px 20px;
         font-size: 13px;
     }
-    
+
     .modal-content {
         padding: 20px;
         margin: 20px;
@@ -763,7 +822,7 @@ html {
 /* === ESTILOS FASE 2 === */
 .phase-two-container {
     padding: 30px;
-    background: linear-gradient(135deg, #fff5f8, #ffebee);
+    background: linear-gradient(135deg, #e1e7ed, #bcccdc); /* Azul claro (basado en el navy de la derecha) */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -779,12 +838,19 @@ html {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .phase-title {
-    color: #e91e63;
+    color: #2c3e50;
     margin-bottom: 25px;
     font-size: 1.8em;
 }
@@ -802,7 +868,7 @@ html {
 }
 
 .next-btn {
-    background: linear-gradient(135deg, #e91e63, #c2185b);
+    background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
     border: none;
     padding: 15px 50px;
@@ -811,24 +877,24 @@ html {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
 }
 
 .next-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
-    background: linear-gradient(135deg, #c2185b, #880e4f);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    background: linear-gradient(135deg, #2980b9, #1c598a);
 }
 
 @media (max-width: 768px) {
     .phase-two-container {
         padding: 20px 15px;
     }
-    
+
     .phase-title {
         font-size: 1.5em;
     }
-    
+
     .phase-text {
         font-size: 1em;
         padding: 15px;
@@ -852,8 +918,13 @@ html {
 }
 
 @keyframes zoomFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .zoom-content {
@@ -867,8 +938,13 @@ html {
 }
 
 @keyframes zoomImage {
-    from { transform: scale(0.7); }
-    to { transform: scale(1); }
+    from {
+        transform: scale(0.7);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
 #zoomCaption {
@@ -905,7 +981,7 @@ html {
     .zoom-content {
         width: 95%;
     }
-    
+
     .close-zoom {
         right: 20px;
         top: 10px;
