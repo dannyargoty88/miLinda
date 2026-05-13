@@ -49,9 +49,14 @@ const phaseTwoMessages = [
         text: "No todo fue perfecto. Hubo cosas que no me gustaban del todo, situaciones que a veces me costaba entender o aceptar, pero nunca fueron algo determinante para dejar atrás todo lo que estábamos construyendo. Al contrario, poco a poco sentí que me iba acoplando, aprendiendo a vivir una relación distinta a cualquier otra que había tenido antes, porque para mí valía la pena intentarlo contigo. <br>" +
             "También sé que yo no soy alguien perfecto. Tengo mis errores, mis maneras y muchas cosas por mejorar, pero de verdad quería cambiar y ser una mejor versión de mí para ti. Lamento si no fue suficiente; créeme que lo intentaba de corazón. " +
             "<br>Agradezco tu cariño, tu apoyo y tus consejos cuando los necesitaba. Tus palabras y tu forma de ser me daban calma y me hacían sentir paz. A tu lado me sentía bien. " +
-            "<br>Yo también quería que sintieras lo mismo conmigo al cuidarte, apoyarte, darte todo el cariño y el amor posible. <br><b>Quería una vida contigo.</b>",
+            "<br>Yo también quería que sintieras lo mismo conmigo al cuidarte, apoyarte, darte todo el cariño y el amor posible. <br>" +
+            "Recuerdo aquel día en que me pediste que siempre siguiera siendo así, y te prometí hacerlo. " +
+            "Espero haber cumplido esa promesa, no solo por haberla dicho, sino porque de verdad me nacía ser así contigo. " +
+            "Contigo me salía dar lo mejor de mí de una forma natural. <br>" +
+            "<b>Quería una vida contigo.</b>",
         image: "assets/6.jpg",
         image2: "assets/7.jpg",
+        image3: "assets/14.jpg",
     },
     {
         title: "Cuando todo tomó otro rumbo",
