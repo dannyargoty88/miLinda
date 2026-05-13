@@ -12,19 +12,22 @@ let currentPhaseTwoIndex = 0;
 const phaseTwoMessages = [
     {
         title: "Donde todo empezó",
-        text: "Todo comenzó cuando tomé el valor de hablarte en aquel lugar donde muchas veces cruzamos caminos. Deseaba tanto conocerte... Me sentía nervioso, quería que pareciera algo casual, pero me fue difícil disimularlo, no sentía esa emoción desde hacía mucho tiempo. Y me dio tanta felicidad cuando dijiste que sí. Aún guardo ese recuerdo con mucho cariño. " +
-            "Y al final de la cita, aunque para ti fue rara, para mí fue especial. Terminó cambiando mi mundo... " +
-            "Recordar esos primeros momentos siempre me traerá una sonrisa. " +
+        text: "Todo comenzó cuando tomé el valor de hablarte en aquel lugar donde muchas veces cruzamos caminos. <br>Deseaba tanto conocerte...<br>" +
+            "Me sentía nervioso, quería que pareciera algo casual, pero me fue difícil disimularlo, no sentía esa emoción desde hacía mucho tiempo. Y me dio tanta felicidad cuando dijiste que sí. <br>" +
+            "Aún guardo ese recuerdo con mucho cariño, al final de la cita, aunque para ti fue rara, para mí fue especial. Terminó cambiando mi mundo... <br>" +
+            "Recordar esos primeros momentos siempre me traerá una sonrisa.<br>" +
             "Fue para mí el inicio de una historia bonita que disfruté vivir.",
         image: "assets/0.jpg"
     },
     {
         title: "Lo hermoso que encontré en ti",
-        text: "Vi cómo nuestro amor crecía día tras día, llenando mi vida de felicidad. " +
-            "Cada conversación, cada momento, cada mirada, las risas, los abrazos, tus ocurrencias y los sueños compartidos fueron sembrando ilusión en mí, " +
-            "porque en ti vi a una gran persona, una gran mujer y la posibilidad de un futuro juntos. " +
+        text: "Vi cómo nuestro amor crecía día tras día, llenando mi vida de felicidad. Cada conversación, cada momento, " +
+            "cada mirada, las risas, los abrazos, tus ocurrencias y los sueños compartidos fueron sembrando ilusión en mí, " +
+            "porque en ti vi a una gran persona, una gran mujer y la posibilidad de un futuro juntos.<br>" +
             "Aunque lo hablábamos sin que fuera algo serio, me diste la ilusión de que algún día podría tener una familia a tu lado, " +
-            "y lo deseaba de verdad. Amarte me encantó, y todos esos recuerdos quedarán en mí como tesoros en el tiempo.",
+            "y lo deseaba de verdad. Aún deseaba vivir y experimentar muchas cosas contigo: viajes, nuevos momentos, " +
+            "etapas bonitas y todo lo que la vida nos hubiera permitido compartir.<br>" +
+            "Amarte me encantó, y todos esos recuerdos quedarán en mí como tesoros en el tiempo.",
         image: "assets/1.jpg",
         image2: "assets/2.jpg"
     },
@@ -35,7 +38,7 @@ const phaseTwoMessages = [
             "algunas fechas, incluso objetos y momentos inesperados que traerán tu recuerdo sin avisar. Extrañaré todo eso y más: tus caritas, tus gestos, " +
             "tus risas y esa forma tuya de alegrar mis días. Eras mi motivación para iniciar cada día; verte y saludarte en las mañanas " +
             "era de lo más bonito. Recuerdo hacer tiempo en el parqueadero solo para verte un instante... " +
-            "Finalizar el día recibiendo tu mensaje de buenas noches, era bonito... " +
+            "Y finalizar el día recibiendo tu mensaje de buenas noches, era bonito... <br>" +
             "Cada vez que algo me recuerde a ti, lo haré con cariño, con una sonrisa desde el corazón por haber compartido una parte de mi vida contigo.",
         image: "assets/3.jpg",
         image2: "assets/4.jpg",
@@ -43,10 +46,10 @@ const phaseTwoMessages = [
     },
     {
         title: "Intentarlo contigo valía la pena",
-        text: "No todo fue perfecto. Hubo cosas que no me gustaban del todo, situaciones que a veces me costaba entender o aceptar, pero nunca fueron algo determinante para dejar atrás todo lo que estábamos construyendo. Al contrario, poco a poco sentí que me iba acoplando, aprendiendo a vivir una relación distinta a cualquier otra que había tenido antes, porque para mí valía la pena intentarlo contigo. " +
+        text: "No todo fue perfecto. Hubo cosas que no me gustaban del todo, situaciones que a veces me costaba entender o aceptar, pero nunca fueron algo determinante para dejar atrás todo lo que estábamos construyendo. Al contrario, poco a poco sentí que me iba acoplando, aprendiendo a vivir una relación distinta a cualquier otra que había tenido antes, porque para mí valía la pena intentarlo contigo. <br>" +
             "También sé que yo no soy alguien perfecto. Tengo mis errores, mis maneras y muchas cosas por mejorar, pero de verdad quería cambiar y ser una mejor versión de mí para ti. Lamento si no fue suficiente; créeme que lo intentaba de corazón. " +
-            "Agradezco tu cariño, tu apoyo y tus consejos cuando los necesitaba. Tus palabras y tu forma de ser me daban calma y me hacían sentir paz. A tu lado me sentía bien. " +
-            "Yo también quería que sintieras lo mismo conmigo, cuidarte, apoyarte y darte todo el amor posible. Quería una vida contigo.",
+            "<br>Agradezco tu cariño, tu apoyo y tus consejos cuando los necesitaba. Tus palabras y tu forma de ser me daban calma y me hacían sentir paz. A tu lado me sentía bien. " +
+            "<br>Yo también quería que sintieras lo mismo conmigo al cuidarte, apoyarte, darte todo el cariño y el amor posible. <br><b>Quería una vida contigo.</b>",
         image: "assets/6.jpg",
         image2: "assets/7.jpg",
     },
@@ -57,10 +60,10 @@ const phaseTwoMessages = [
     },
     {
         title: "Gracias por todo",
-        text: "...Ante mis ojos fuiste arte, una verdadera obra de arte. " +
-            "Gracias por todos los momentos vividos, por las sonrisas, por los sueños compartidos y por cada instante que vivimos juntos. " +
-            "Te deseo de corazón que todas tus metas, tus sueños y cada objetivo que tengas se cumplan, porque mereces cosas bonitas y una vida llena de felicidad. " +
-            "Voy a extrañarte, mi linda, extrañaré tu presencia, tus risas y todo eso especial que llevabas contigo. " +
+        text: "...Ante mis ojos fuiste arte, una verdadera obra de arte. <br>" +
+            "Gracias por todos los momentos vividos, por las sonrisas, por los sueños compartidos y por cada instante que vivimos juntos. <br>" +
+            "Te deseo de corazón que todas tus metas, tus sueños y cada objetivo que tengas se cumplan, porque mereces cosas bonitas y una vida llena de felicidad. <br>" +
+            "Voy a extrañarte, mi linda, extrañaré tu presencia, tus risas y todo eso especial que llevabas contigo. <br>" +
             "Siempre te recordaré con cariño y con gratitud por todo lo bonito que dejaste en mi vida.",
         image: "assets/8.jpg",
         image2: "assets/9.jpg",
@@ -69,7 +72,7 @@ const phaseTwoMessages = [
     },
     {
         title: "Fin",
-        text: "Mi amor bonita...Adiós." + "\n\n\n\n\n\nNOTA: aléjate de OnlyFans 🤭",
+        text: "Mi amor bonita...\n\n\n\nAdiós." + "\n\n\n\n\nNOTA: aléjate de OnlyFans 🤭",
         image: "assets/13.png"
     }
 ];
@@ -550,16 +553,15 @@ function handlePhaseTwoNext() {
             .catch(err => console.error('Error al llamar al API de finalización:', err));
 
         Swal.fire({
-            title: 'Gracias por tanto... Mi Amor Bonita',
-            text: 'Esta fue mi última carta para ti con todo mi amor y cariño...\n\nTu ex-vecino.',
-            icon: 'info',
+            title: 'Gracias por tanto...<br><b>Mi amor bonita</b>',
+            html: 'Esta fue mi última carta para ti<br>con todo mi amor y cariño...<br><br><b>Tu ex-vecino 😊</b>',
             confirmButtonText: 'Terminar',
             confirmButtonColor: '#2c3e50'
         }).then(() => {
             localStorage.removeItem('currentUser');
             setTimeout(() => {
                 window.location.href = 'index.html';
-            }, 3000);
+            }, 2000);
         });
     }
 }

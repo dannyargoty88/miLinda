@@ -865,6 +865,7 @@ html {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(233, 30, 99, 0.1);
+    white-space: pre-line;
 }
 
 .next-btn {
