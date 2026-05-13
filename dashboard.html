@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego Especial - Dashboard</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐼</text></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐼</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -33,10 +36,11 @@
             <!-- Lado Izquierdo: Preguntas -->
             <div class="questions-section">
                 <div class="question-header">
-                    <h2 id="questionTitle">🤔 Pregunta <span id="questionNumber">1</span> de <span id="totalQuestions">2</span></h2>
+                    <h2 id="questionTitle">🤔 Pregunta <span id="questionNumber">1</span> de <span
+                            id="totalQuestions">2</span></h2>
                     <p id="questionText">Cargando pregunta...</p>
                 </div>
-                
+
                 <div class="options-container">
                     <div class="option" data-option="A">
                         <span class="option-letter">A</span>
@@ -55,7 +59,7 @@
                         <span class="option-text" id="optionD">Opción D</span>
                     </div>
                 </div>
-                
+
                 <div class="question-footer">
                     <button id="confirmBtn" class="confirm-btn" disabled>📝 Confirmar Respuesta</button>
                     <p class="instruction-text">Selecciona una respuesta y confirma para continuar</p>
@@ -68,9 +72,9 @@
                     <img id="revealImage" src="assets/mi_linda.png" alt="Imagen Especial" class="reveal-image">
                     <div class="image-overlay" id="imageOverlay"></div>
                 </div>
-                
+
                 <div class="progress-container">
-                    <h3>🎆 Progreso del Juego</h3>
+                    <h3>🎆 Progreso</h3>
                     <div class="progress-bar">
                         <div class="progress-fill" id="progressFill"></div>
                         <span class="progress-text" id="progressText">0%</span>
@@ -79,7 +83,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Modal de Resultado -->
         <div id="resultModal" class="result-modal" style="display: none;">
             <div class="modal-content">
@@ -98,4 +102,5 @@
 
     <script src="dashboard.js"></script>
 </body>
+
 </html>

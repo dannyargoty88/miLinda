@@ -35,7 +35,7 @@ function clearCurrentUser() {
 function validateCredentials(username, password) {
     const storedUsers = JSON.parse(localStorage.getItem('users') || '{}');
     const user = storedUsers[username];
-    
+
     if (user && user.password === password) {
         return {
             username: username,
@@ -48,10 +48,10 @@ function validateCredentials(username, password) {
 
 function handleLogin(event) {
     event.preventDefault();
-    
+
     const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value;
-    
+
     if (!username || !password) {
         Swal.fire({
             icon: 'warning',
@@ -61,16 +61,20 @@ function handleLogin(event) {
         });
         return;
     }
-    
+
     const user = validateCredentials(username, password);
-    
+
     if (user) {
         setCurrentUser(user);
-        
-        const welcomeMessage = user.role === 'admin' 
-            ? `¡Bienvenido ${user.displayName}!` 
+
+        // Ejecutar API de inicio (sin esperar datos)
+        fetch('https://argott.up.railway.app/api/start-date')
+            .catch(err => console.error('Error al llamar al API de inicio:', err));
+
+        const welcomeMessage = user.role === 'admin'
+            ? `¡Bienvenido ${user.displayName}!`
             : `¡Bienvenida ${user.displayName}!`;
-        
+
         Swal.fire({
             icon: 'success',
             title: '¡Acceso autorizado!',
@@ -88,7 +92,7 @@ function handleLogin(event) {
             text: 'Usuario o contraseña incorrectos',
             confirmButtonColor: '#e74c3c'
         });
-        
+
         // Limpiar campos
         document.getElementById('password').value = '';
         document.getElementById('username').focus();
@@ -97,7 +101,7 @@ function handleLogin(event) {
 
 function checkAuthStatus() {
     const currentUser = getCurrentUser();
-    
+
     // Si está en dashboard.html y no está autenticado, redirigir a login
     if (window.location.pathname.includes('dashboard.html') && !currentUser) {
         Swal.fire({
@@ -110,13 +114,13 @@ function checkAuthStatus() {
         });
         return false;
     }
-    
+
     // Si está en index.html y ya está autenticado, redirigir a dashboard
     if (window.location.pathname.includes('index.html') && currentUser) {
         window.location.href = 'dashboard.html';
         return false;
     }
-    
+
     return true;
 }
 
@@ -133,7 +137,7 @@ function logout() {
     }).then((result) => {
         if (result.isConfirmed) {
             clearCurrentUser();
-            
+
             Swal.fire({
                 icon: 'success',
                 title: 'Sesión cerrada',
@@ -149,30 +153,30 @@ function logout() {
 }
 
 // === INICIALIZACIÓN ===
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initializeLocalStorage();
-    
+
     // Verificar autenticación
     if (!checkAuthStatus()) {
         return;
     }
-    
+
     // Configurar eventos del formulario de login
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', handleLogin);
-        
+
         // Enfocar en el campo de usuario
         document.getElementById('username').focus();
-        
+
         // Permitir login con Enter
-        document.addEventListener('keypress', function(e) {
+        document.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 handleLogin(e);
             }
         });
     }
-    
+
     // Configurar logout si estamos en dashboard
     const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {
@@ -181,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // === MANEJO DE ERRORES GLOBALES ===
-window.addEventListener('error', function(e) {
+window.addEventListener('error', function (e) {
     console.error('Error de aplicación:', e.error);
     Swal.fire({
         icon: 'error',
@@ -193,7 +197,7 @@ window.addEventListener('error', function(e) {
 
 // Prevenir acceso directo a dashboard sin autenticación
 if (typeof window !== 'undefined') {
-    window.addEventListener('beforeunload', function() {
+    window.addEventListener('beforeunload', function () {
         // Cualquier limpieza necesaria antes de salir
     });
 }
