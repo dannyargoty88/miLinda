@@ -51,8 +51,7 @@ const phaseTwoMessages = [
             "<br>Agradezco tu cariño, tu apoyo y tus consejos cuando los necesitaba. Tus palabras y tu forma de ser me daban calma y me hacían sentir paz. A tu lado me sentía bien. " +
             "<br>Yo también quería que sintieras lo mismo conmigo al cuidarte, apoyarte, darte todo el cariño y el amor posible. <br>" +
             "Recuerdo aquel día en que me pediste que siempre siguiera siendo así, y te prometí hacerlo. " +
-            "Espero haber cumplido esa promesa, no solo por haberla dicho, sino porque de verdad me nacía ser así contigo. <br>" +
-            "Contigo me salía dar lo mejor de mí de una forma natural. <br>" +
+            "Espero haber cumplido esa promesa, no solo por haberla dicho, sino porque de verdad contigo me nacía ser así y dar lo mejor de mí. <br>" +
             "<b>Quería una vida contigo.</b>",
         image: "assets/6.jpg",
         image2: "assets/7.jpg",
