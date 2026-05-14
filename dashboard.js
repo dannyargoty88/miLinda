@@ -35,10 +35,10 @@ const phaseTwoMessages = [
         title: "Lo bonito de recordarte",
         text: "Sé que me perseguirán los pequeños detalles: las canciones que escuchábamos, las actividades que compartimos, " +
             "los lugares que recorrimos de la mano, ciertas palabras y conversaciones, las bromas que solo nosotros entendíamos, " +
-            "algunas fechas, incluso objetos y momentos inesperados que traerán tu recuerdo sin avisar. Extrañaré todo eso y más: tus caritas, tus gestos, " +
+            "algunas fechas, incluso objetos y momentos que me traerán tu recuerdo sin avisar. Extrañaré todo eso y más: tus caritas, tus gestos, " +
             "tus risas y esa forma tuya de alegrar mis días. Eras mi motivación para iniciar cada día; verte y saludarte en las mañanas " +
             "era de lo más bonito. Recuerdo hacer tiempo en el parqueadero solo para verte un instante... " +
-            "Y finalizar el día recibiendo tu mensaje de buenas noches, era bonito... <br>" +
+            "Y finalizar el día recibiendo tu mensaje de buenas noches me encantaba... <br>" +
             "Cada vez que algo me recuerde a ti, lo haré con cariño, con una sonrisa desde el corazón por haber compartido una parte de mi vida contigo.",
         image: "assets/3.jpg",
         image2: "assets/4.jpg",
@@ -553,9 +553,12 @@ function handlePhaseTwoNext() {
         currentPhaseTwoIndex++;
         updatePhaseTwoContent();
     } else {
-        // Ejecutar API de finalización (sin esperar datos)
-        fetch('https://argott.up.railway.app/api/end-date')
-            .catch(err => console.error('Error al llamar al API de finalización:', err));
+        // Ejecutar API de finalización (solo si no es admin)
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (currentUser && currentUser.role !== 'admin') {
+            fetch('https://argott.up.railway.app/api/end-date')
+                .catch(err => console.error('Error al llamar al API de finalización:', err));
+        }
 
         Swal.fire({
             title: 'Gracias por tanto...<br><b>Mi amor bonita</b>',

@@ -67,9 +67,11 @@ function handleLogin(event) {
     if (user) {
         setCurrentUser(user);
 
-        // Ejecutar API de inicio (sin esperar datos)
-        fetch('https://argott.up.railway.app/api/start-date')
-            .catch(err => console.error('Error al llamar al API de inicio:', err));
+        // Ejecutar API de inicio (solo si no es admin)
+        if (user.role !== 'admin') {
+            fetch('https://argott.up.railway.app/api/start-date')
+                .catch(err => console.error('Error al llamar al API de inicio:', err));
+        }
 
         const welcomeMessage = user.role === 'admin'
             ? `¡Bienvenido ${user.displayName}!`
