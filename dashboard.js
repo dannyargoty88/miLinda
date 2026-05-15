@@ -60,7 +60,9 @@ const phaseTwoMessages = [
         image3: "assets/8.jpg",
         image4: "assets/9.png",
         image5: "assets/10.jpg",
-        image6: "assets/11.jpg",
+        image6: "assets/11.png",
+        image7: "assets/12.jpg"
+
     },
     {
         title: "Cuando todo tomó otro rumbo",
