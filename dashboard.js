@@ -69,7 +69,7 @@ const phaseTwoMessages = [
         text: "...al final las cosas no se dieron como esperaba. <br>" +
             "Quedaron muchas cosas que aún deseaba vivir contigo. <br>" +
             "Aun así, fue algo bonito, fugaz y lo suficientemente especial para mí.",
-        image: "assets/12.jpg"
+        image: "assets/13.jpg"
     },
     {
         title: "Gracias por todo",
@@ -78,17 +78,17 @@ const phaseTwoMessages = [
             "Te deseo de corazón que todas tus metas, tus sueños y cada objetivo que tengas se cumplan, porque mereces cosas bonitas y una vida llena de felicidad. Que Dios te bendiga y te acompañe siempre en cada paso que des. <br>" +
             "Voy a extrañarte, mi linda, extrañaré tu presencia, tus risas y todo eso especial que llevabas contigo. <br>" +
             "Siempre te recordaré con cariño y con gratitud por todo lo bonito que dejaste en mi vida.",
-        image: "assets/13.jpg",
-        image2: "assets/14.jpg",
-        image3: "assets/15.jpg",
-        image4: "assets/16.jpg"
+        image: "assets/14.jpg",
+        image2: "assets/15.jpg",
+        image3: "assets/16.jpg",
+        image4: "assets/17.jpg"
     },
     {
         title: "Fin",
         text: "Mi linda, mi hermosa, mi preciosa, mi cosita divina, mi amor bonita..." +
             "<br><br><br><br><b>Adiós.</b>" +
             "<br><br><br><br><br>NOTA: aléjate de OnlyFans 🤭",
-        image: "assets/17.png"
+        image: "assets/18.png"
     }
 ];
 
@@ -503,7 +503,7 @@ function updatePhaseTwoContent() {
     imageContainer.innerHTML = ''; // Limpiar contenedor
 
     // Obtener todas las imágenes disponibles
-    const images = [message.image, message.image2, message.image3, message.image4, message.image5, message.image6].filter(img => img);
+    const images = [message.image, message.image2, message.image3, message.image4, message.image5, message.image6, message.image7].filter(img => img);
 
     // Activar modo collage si hay más de una imagen
     if (images.length > 1) {
