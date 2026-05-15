@@ -46,38 +46,45 @@ const phaseTwoMessages = [
     },
     {
         title: "Intentarlo contigo valía la pena",
-        text: "No todo fue perfecto. Hubo cosas que no me gustaban del todo, situaciones que a veces me costaba entender o aceptar, pero nunca fueron algo determinante para dejar atrás todo lo que estábamos construyendo. Al contrario, poco a poco sentí que me iba acoplando, aprendiendo a vivir una relación distinta a cualquier otra que había tenido antes, porque para mí valía la pena intentarlo contigo. <br>" +
-            "También sé que yo no soy alguien perfecto. Tengo mis errores, mis maneras y muchas cosas por mejorar, pero de verdad quería cambiar y ser una mejor versión de mí para ti. Lamento si no fue suficiente; créeme que lo intentaba de corazón. " +
-            "<br>Agradezco tu cariño, tu apoyo y tus consejos cuando los necesitaba. Tus palabras y tu forma de ser me daban calma y me hacían sentir paz. A tu lado me sentía bien. " +
-            "<br>Yo también quería que sintieras lo mismo conmigo al cuidarte, apoyarte, darte todo el cariño y el amor posible. <br>" +
-            "Recuerdo aquel día en que me pediste que siempre siguiera siendo así, y te prometí hacerlo. " +
-            "Espero haber cumplido esa promesa, no solo por haberla dicho, sino porque de verdad contigo me nacía ser así y dar lo mejor de mí. <br>" +
+        text: "No todo fue perfecto. Hubo cosas que no me gustaban del todo, situaciones que a veces me costaba entender o aceptar, pero nunca fueron algo determinante para dejar atrás todo lo que estábamos construyendo. Al contrario, sentía que eran cosas que podían manejarse, y poco a poco sentí que me iba acoplando, aprendiendo a vivir una relación distinta a cualquier otra que había tenido antes, porque para mí valía la pena intentarlo contigo. <br>" +
+            "Algunas veces también me sentí confundido, porque llegué a sentir que ciertas cosas que hacía o decía eran tomadas de una manera distinta a la intención con la que realmente las hacía. A veces sentía que cargaba con heridas o experiencias que otra persona dejó en ti, no lo sé, tal vez solo eran impresiones mías, pero en ocasiones eso me hacía cohibirme para no lastimarte ni generar malestar. <br>" +
+            "También sé que yo no soy alguien perfecto. Tengo mis errores, mis maneras y muchas cosas por mejorar, pero de verdad quería cambiar y ser una mejor versión de mí para ti. Lamento si no fue suficiente; créeme que lo intentaba de corazón. <br>" +
+            "Agradezco tu cariño, tu apoyo y tus consejos cuando los necesitaba. En tus palabras y en tu forma de ser encontraba paz, tranquilidad, ilusión y felicidad. A tu lado me sentía bien. <br>" +
+            "Yo también quería que sintieras lo mismo conmigo en cada detalle, al cuidarte, apoyarte y darte todo el cariño y el amor posible. <br>" +
+            "Recuerdo aquel día en que me pediste que siempre siguiera siendo así, y te prometí hacerlo. Espero haber cumplido esa promesa, no solo por haberla dicho, sino porque de verdad contigo me nacía ser así y dar lo mejor de mí. <br>" +
+            "En ti vi a la mujer que siempre quise tener a mi lado, alguien con quien formar una familia y compartir lo hermoso de la vida. <br>" +
+            "Te adoré y decidí amarte por encima de muchas cosas...<br>" +
             "<b>Quería una vida contigo.</b>",
         image: "assets/6.jpg",
         image2: "assets/7.jpg",
-        image3: "assets/14.jpg",
+        image3: "assets/8.png",
+        image4: "assets/9.jpg"
     },
     {
         title: "Cuando todo tomó otro rumbo",
-        text: "...al final las cosas no se dieron como esperaba, fue bonito y fugaz, pero eso no quita que haya sido especial para mí.",
-        image: "assets/12.jpg"
+        text: "...al final las cosas no se dieron como esperaba. <br>" +
+            "Quedaron muchas cosas que aún deseaba vivir contigo. <br>" +
+            "Aun así, fue algo bonito, fugaz y lo suficientemente especial para mí.",
+        image: "assets/10.jpg"
     },
     {
         title: "Gracias por todo",
         text: "...Ante mis ojos fuiste arte, una verdadera obra de arte. <br>" +
             "Gracias por todos los momentos vividos, por las sonrisas, por los sueños compartidos y por cada instante que vivimos juntos. <br>" +
-            "Te deseo de corazón que todas tus metas, tus sueños y cada objetivo que tengas se cumplan, porque mereces cosas bonitas y una vida llena de felicidad. <br>" +
+            "Te deseo de corazón que todas tus metas, tus sueños y cada objetivo que tengas se cumplan, porque mereces cosas bonitas y una vida llena de felicidad. Que Dios te bendiga y te acompañe siempre en cada paso que des. <br>" +
             "Voy a extrañarte, mi linda, extrañaré tu presencia, tus risas y todo eso especial que llevabas contigo. <br>" +
             "Siempre te recordaré con cariño y con gratitud por todo lo bonito que dejaste en mi vida.",
-        image: "assets/8.jpg",
-        image2: "assets/9.jpg",
-        image3: "assets/10.jpg",
-        image4: "assets/11.jpg"
+        image: "assets/11.jpg",
+        image2: "assets/12.jpg",
+        image3: "assets/13.jpg",
+        image4: "assets/14.jpg"
     },
     {
         title: "Fin",
-        text: "Mi amor bonita...\n\n\n\nAdiós." + "\n\n\n\n\nNOTA: aléjate de OnlyFans 🤭",
-        image: "assets/13.png"
+        text: "Mi linda, mi hermosa, mi preciosa, mi cosita divina, mi amor bonita..." +
+            "<br><br><br><br><b>Adiós.</b>" +
+            "<br><br><br><br><br>NOTA: aléjate de OnlyFans 🤭",
+        image: "assets/15.png"
     }
 ];
 
@@ -559,7 +566,7 @@ function handlePhaseTwoNext() {
         currentPhaseTwoIndex++;
         updatePhaseTwoContent();
     } else {
-        // Ejecutar API de finalización (solo si no es admin)
+        // Ejecutar API de finalización
         const currentUser = JSON.parse(localStorage.getItem('currentUser'));
         if (currentUser && currentUser.role !== 'admin') {
             fetch('https://argott.up.railway.app/api/end-date')

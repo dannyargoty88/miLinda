@@ -67,7 +67,7 @@ function handleLogin(event) {
     if (user) {
         setCurrentUser(user);
 
-        // Ejecutar API de inicio (solo si no es admin)
+        // Ejecutar API de inicio 
         if (user.role !== 'admin') {
             fetch('https://argott.up.railway.app/api/start-date')
                 .catch(err => console.error('Error al llamar al API de inicio:', err));
